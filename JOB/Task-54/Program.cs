@@ -18,10 +18,9 @@
 
 int[,] array = new int[5, 5];
 
-// Метод создания рандоиного массива.
+// Метод создания рандомного массива.
 int[,] RandomArray(int[,] array)
 {
-    System.Console.WriteLine("Создан рандомный двумерный массив:");
     Random rnd = new Random();
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -57,7 +56,6 @@ int[,] SortLineArray(int[,] array)
 // Метод вывода массива на экран.
 void OutPutArray(int[,] array)
 {
-    System.Console.WriteLine("Создан отсортированный двумерный массив построчно:");
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
@@ -68,10 +66,8 @@ void OutPutArray(int[,] array)
     }
 }
 
-
+System.Console.WriteLine("Создан рандомный двумерный массив:");
 array = RandomArray(array);
 array = SortLineArray(array);
+System.Console.WriteLine("Данный двумерный массив отсортировался построчно:");
 OutPutArray(array);
-
-
-

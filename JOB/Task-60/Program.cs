@@ -13,7 +13,7 @@
 int[,,] array = new int[3, 3, 3];
 
 // Метод создающий рандомный трёхмерный массив
-// с не повторяющимися значениями
+// с не повторяющимися двузначными значениями
 int[,,] RandomArray3D(int[,,] array)
 {
     Random rnd = new Random();
@@ -63,7 +63,6 @@ int[,,] IndexArray3D(int[,,] array)
     }
     return array;
 }
-
 
 System.Console.WriteLine();
 RandomArray3D(array);

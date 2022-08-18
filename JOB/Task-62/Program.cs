@@ -9,7 +9,7 @@
 */
 int[,] array = new int[4, 4];
 
-// Метод создания рандомного массива.
+// Метод создания рандомного двумерного массива.
 int[,] RandomArray(int[,] array)
 {
     Random rnd = new Random();
@@ -28,13 +28,13 @@ int[,] RandomArray(int[,] array)
 int[,] SpiralSortArray4x4(int[,] array)
 {
     int[] massifeSort = new int[array.GetLength(0) * array.GetLength(1)];
-    int count = 0;
+    int countIndex = 0;
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            massifeSort[count] = array[i, j];
-            count++;
+            massifeSort[countIndex] = array[i, j];
+            countIndex++;
         }
     }
 

@@ -19,7 +19,6 @@ int[,] array = new int[6,6];
 // Метод создающий рандомный массив
 int[,] RandomArray(int[,] array)
 {
-    System.Console.WriteLine("Создан массив с рандомными числами:");
     Random rnd = new Random();
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -34,9 +33,8 @@ int[,] RandomArray(int[,] array)
 }
 
 // Метод который находит строку, с наименьшей суммой  
-void LineMinSumma(int[,] array)
+int LineMinSumma(int[,] array)
 {
-    System.Console.Write("Номер строки с наименьшей суммой: ");
     int minSummLine = 0;
     int sumMinLine = 0;
     int summ = 0;
@@ -66,7 +64,9 @@ void LineMinSumma(int[,] array)
             }
         }
     }
-    System.Console.Write(minSummLine);
+    return minSummLine;
 }
 
-LineMinSumma(array = RandomArray(array));
+System.Console.WriteLine("Создан массив с рандомными числами:");
+RandomArray(array);
+System.Console.Write("Номер строки с наименьшей суммой: " + LineMinSumma(array));

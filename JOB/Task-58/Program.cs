@@ -26,7 +26,6 @@ int[,] array2 = new int[5, 3];
 // Метод создающий рандомный массив
 int[,] RandomArray(int[,] array)
 {
-    System.Console.WriteLine("Создан массив с рандомными числами:");
     Random rnd = new Random();
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -40,14 +39,15 @@ int[,] RandomArray(int[,] array)
     return array;
 }
 
+System.Console.WriteLine("Создан перый рандомный двумерный массив:");
 array = RandomArray(array);
+System.Console.WriteLine("Создан второй рандомный двумерный массив:");
 array2 = RandomArray(array2);
 
 // Метод создающий новый массив 
 // из произведения матриц двух входящих массивов
 int[,] GenerationTwoMatrix(int[,] array, int[,] array2)
 {
-    System.Console.WriteLine("Произведения матриц двух входящих массивов:");
     int[,] generationTwoMatrix = new int[array.GetLength(0),array.GetLength(1)];
     for (int i = 0; i < array.GetLength(0) && i < array2.GetLength(0); i++)
     {
@@ -72,4 +72,6 @@ void OutPutArray(int[,] array)
     }
 }
 
+
+System.Console.WriteLine("Произведения матриц двух массивов:");
 OutPutArray(GenerationTwoMatrix(array, array2));
